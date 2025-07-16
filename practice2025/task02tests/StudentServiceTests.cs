@@ -58,18 +58,18 @@ public class StudentServiceTests
     public void GroupStudentsByFaculty_ReturnsCorrectGroups()
     {
         var lookup = _service.GroupStudentsByFaculty();
-        
+
         var fitGroup = lookup["ФИТ"].ToList();
         Assert.Equal(2, fitGroup.Count);
         Assert.Contains(fitGroup, s => s.Name == "Иван");
         Assert.Contains(fitGroup, s => s.Name == "Анна");
-        
+
         var ecoGroup = lookup["Экономика"].ToList();
         Assert.Equal(2, ecoGroup.Count);
         Assert.Contains(ecoGroup, s => s.Name == "Петр");
         Assert.Contains(ecoGroup, s => s.Name == "Мария");
     }
-    
+
     [Fact]
     public void GetFacultyWithHighestAverageGrade_WithEqualGrades_ReturnsFirstFaculty()
     {
@@ -78,7 +78,7 @@ public class StudentServiceTests
             new() { Faculty = "A", Grades = new List<int> { 5, 5 } },
             new() { Faculty = "B", Grades = new List<int> { 5, 5 } }
         };
-        
+
         var service = new StudentService(students);
         var result = service.GetFacultyWithHighestAverageGrade();
         Assert.Equal("A", result);
