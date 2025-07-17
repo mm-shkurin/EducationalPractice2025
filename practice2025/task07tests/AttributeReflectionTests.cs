@@ -9,9 +9,9 @@ namespace task07tests
         public void ClassHasAttribute_DisplayName_ReturnsTrue()
         {
             var type = typeof(SampleClass);
-            
+
             var hasAttribute = ReflectionHelper.ClassHasAttribute<DisplayNameAttribute>(type);
-            
+
             Assert.True(hasAttribute);
         }
 
@@ -19,9 +19,9 @@ namespace task07tests
         public void GetAttribute_DisplayName_ReturnsCorrectName()
         {
             var type = typeof(SampleClass);
-            
+
             var attribute = ReflectionHelper.GetAttribute<DisplayNameAttribute>(type);
-            
+
             Assert.NotNull(attribute);
             Assert.Equal("Sample Class", attribute.Name);
         }
@@ -30,9 +30,9 @@ namespace task07tests
         public void MemberHasAttribute_PropertyDisplayName_ReturnsTrue()
         {
             var property = typeof(SampleClass).GetProperty("Number");
-            
+
             var hasAttribute = ReflectionHelper.MemberHasAttribute<DisplayNameAttribute>(property);
-            
+
             Assert.True(hasAttribute);
         }
 
@@ -40,9 +40,9 @@ namespace task07tests
         public void GetAttribute_PropertyDisplayName_ReturnsCorrectName()
         {
             var property = typeof(SampleClass).GetProperty("Number");
-            
+
             var attribute = ReflectionHelper.GetAttribute<DisplayNameAttribute>(property);
-            
+
             Assert.NotNull(attribute);
             Assert.Equal("Number Property", attribute.Name);
         }
@@ -51,9 +51,9 @@ namespace task07tests
         public void ClassHasAttribute_Version_ReturnsTrue()
         {
             var type = typeof(SampleClass);
-            
+
             var hasAttribute = ReflectionHelper.ClassHasAttribute<VersionAttribute>(type);
-            
+
             Assert.True(hasAttribute);
         }
 
@@ -61,8 +61,8 @@ namespace task07tests
         public void GetMembersWithAttribute_ReturnsCorrectCount()
         {
             var members = ReflectionHelper.GetMembersWithAttribute<DisplayNameAttribute>(typeof(SampleClass));
-            
-            Assert.Equal(3, members.Count()); 
+
+            Assert.Equal(3, members.Count());
         }
     }
 }

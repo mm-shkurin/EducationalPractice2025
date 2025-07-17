@@ -2,7 +2,7 @@ using System;
 using System.IO;
 using Xunit;
 using task09;
-using task07; 
+using task07;
 
 namespace task09tests
 {
@@ -38,14 +38,14 @@ namespace task09tests
         }
     }
 
-    [DisplayName("Test Class")] 
-    [Version(2, 0)]            
+    [DisplayName("Test Class")]
+    [Version(2, 0)]
     public class TestClass
     {
-        [DisplayName("Test Property")] 
+        [DisplayName("Test Property")]
         public int TestProperty { get; set; }
 
-        [DisplayName("Test Method")] 
+        [DisplayName("Test Method")]
         public void TestMethod() { }
     }
 }

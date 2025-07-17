@@ -21,14 +21,14 @@ public static class ReflectionHelper
         where TAttribute : Attribute
     {
         var members = new List<MemberInfo>();
-        
+
         if (type.GetCustomAttributes(typeof(TAttribute), false).Any())
         {
             members.Add(type);
         }
-        
+
         members.AddRange(type.GetMembers().Where(m => m.GetCustomAttributes(typeof(TAttribute), false).Any()));
-        
+
         return members;
     }
 
