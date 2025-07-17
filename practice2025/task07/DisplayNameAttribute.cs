@@ -1,11 +1,15 @@
 ﻿using System;
 
-[AttributeUsage(AttributeTargets.Class | AttributeTargets.Method | AttributeTargets.Property)]
-public class DisplayNameAttribute : Attribute
+namespace task07
 {
-    public string DisplayName { get; }
-    public DisplayNameAttribute(string displayName)
+    [AttributeUsage(AttributeTargets.Class | AttributeTargets.Method | AttributeTargets.Property)]
+    public class DisplayNameAttribute : Attribute
     {
-        DisplayName = displayName;
+        public string Name { get; }
+
+        public DisplayNameAttribute(string name)
+        {
+            Name = name;
+        }
     }
 }

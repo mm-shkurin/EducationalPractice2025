@@ -2,6 +2,9 @@
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+
     <IsPackable>false</IsPackable>
     <IsTestProject>true</IsTestProject>
   </PropertyGroup>
@@ -20,7 +23,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="../task07/task07.csproj" />
+    <ProjectReference Include="..\task09\task09.csproj" />
+    <ProjectReference Include="..\task07\task07.csproj" />
   </ItemGroup>
 
 </Project>

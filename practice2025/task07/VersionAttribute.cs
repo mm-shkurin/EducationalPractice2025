@@ -1,13 +1,17 @@
 using System;
 
-[AttributeUsage(AttributeTargets.Class)]
-public class VersionAttribute : Attribute
+namespace task07
 {
-    public int Major { get; }
-    public int Minor { get; }
-    public VersionAttribute(int major, int minor)
+    [AttributeUsage(AttributeTargets.Class)]
+    public class VersionAttribute : Attribute
     {
-        Major = major;
-        Minor = minor;
+        public int Major { get; }
+        public int Minor { get; }
+
+        public VersionAttribute(int major, int minor)
+        {
+            Major = major;
+            Minor = minor;
+        }
     }
 }
