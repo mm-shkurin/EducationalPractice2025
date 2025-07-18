@@ -37,7 +37,6 @@ namespace task10tests
         [Fact]
         public void LoadAndExecutePlugins_WithCircularDependency_ThrowsException()
         {
-            // Arrange
             var circularGraph = new Dictionary<string, string[]>
             {
                 ["CircularPlugin1"] = new[] { "CircularPlugin2" },
