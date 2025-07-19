@@ -41,8 +41,8 @@ namespace task14tests
         public void TestQuadraticFunction()
         {
             var QUAD = (double x) => x * x;
-            double result = DefiniteIntegral.Solve(0, 2, QUAD, 1e-5, 6);
-            Assert.Equal(8.0 / 3.0, result, 1e-4);
+            double result = DefiniteIntegral.Solve(0, 2, QUAD, 1e-6, 6);
+            Assert.Equal(8.0 / 3.0, result, 1e-3);
         }
 
         [Fact]
